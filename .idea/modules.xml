@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AmarJavaPractice-GitHub.iml" filepath="$PROJECT_DIR$/AmarJavaPractice-GitHub.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AmarJavaPractiseModule/AmarJavaPractiseModule.iml" filepath="$PROJECT_DIR$/AmarJavaPractiseModule/AmarJavaPractiseModule.iml" />
+    </modules>
+  </component>
+</project>
