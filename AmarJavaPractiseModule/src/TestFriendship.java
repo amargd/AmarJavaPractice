@@ -66,26 +66,29 @@ public class TestFriendship {
     }
 
     @Test
-    public void addFriendsFromTextFile()
-    {
+    public void addFriendsFromTextFile() {
         Friendship friendship = new Friendship();
-        String readFileString;
-        List<String> namesList = null;
-        if((readFileString = friendship.CreateFriends("C:\\Repositories\\AmarJavaPractice-GitHub\\AmarJavaPractiseModule\\src\\Friends.txt")) == null)
+        ArrayList<String> names = new ArrayList<String>();
+
+        if ((names = friendship.ReadFriendsFromFile("C:\\Repositories\\AmarJavaPractice-GitHub\\AmarJavaPractiseModule\\src\\Friends.txt")) == null)
             try {
                 throw new Exception("Friends file is empty!");
             } catch (Exception e) {
                 e.printStackTrace();
             }
 
-        for(String name: readFileString.split(";"))
-            namesList.add(name);
 
-        for(int i=0; i<namesList.size(); i+=2)
-        {
-            friendship.makeFriend(namesList.get(i), namesList.get(i+1));
+        for (int i = 0; i < names.size(); i += 2) {
+            friendship.makeFriend(names.get(i), names.get(i + 1));
         }
 
+        List<String> directFriends = friendship.getDirectFriends("David");
+
+        ArrayList<String> expectedFriends = new ArrayList<String>();
+        expectedFriends.add("Bella");
+        expectedFriends.add("Elizabeth");
+
+        assertEquals(expectedFriends, directFriends);
     }
 
 

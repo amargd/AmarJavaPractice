@@ -38,7 +38,7 @@ public class Friendship {
         return null;
     }
 
-    public String CreateFriends(String filename)
+    public ArrayList<String> ReadFriendsFromFile(String filename)
     {
         return createFriends.ReadFriendsTextFile(filename);
     }
